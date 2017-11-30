@@ -1,16 +1,22 @@
 {
   "name": "daburu-js-npm",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "An npm template for Javascript.",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "npm run test && npm run build",
     "build": "npm run copy",
-    "test": "nyc --reporter=html --reporter=text mocha",
+    "test": "nyc mocha",
     "clean:dist": "rm -rf dist",
     "clean": "npm run clean:dist",
     "copy:dist": "mkdir -p dist && cp -r src/* dist/",
     "copy": "npm run copy:dist"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "text"
+    ]
   },
   "repository": {
     "type": "git",

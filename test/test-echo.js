@@ -1,4 +1,4 @@
-var daburuJsNpm = require("../dist/index.js");
+var daburuJsNpm = require("../src/index.js");
 var expect = require("chai").expect;
 
 describe("Test the echo() function.", function(){
