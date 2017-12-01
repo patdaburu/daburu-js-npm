@@ -1,16 +1,17 @@
 {
   "name": "daburu-js-npm",
-  "version": "1.0.4",
-  "description": "An npm template for Javascript.",
+  "version": "1.0.6",
+  "description": "This is an npm template for Javascript.",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "npm run test && npm run build",
+    "prepublish": "npm run lint && npm run test && npm version patch && npm run build",
     "build": "npm run copy",
     "test": "nyc mocha",
     "clean:dist": "rm -rf dist",
     "clean": "npm run clean:dist",
     "copy:dist": "mkdir -p dist && cp -r src/* dist/",
-    "copy": "npm run copy:dist"
+    "copy": "npm run copy:dist",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "nyc": {
     "reporter": [
@@ -29,11 +30,11 @@
     "url": "https://github.com/patdaburu/daburu-js-npm/issues"
   },
   "homepage": "https://github.com/patdaburu/daburu-js-npm#readme",
-  "dependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^4.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.12.1",
+    "mocha": "^4.0.1",
     "nyc": "^11.3.0"
   }
 }

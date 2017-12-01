@@ -1,6 +1,6 @@
 exports.echo = function (msg, loud) {
     if (!msg) {
-        return '';
+        return "";
     }
     else if (loud) {
         return msg.toUpperCase();
@@ -8,4 +8,4 @@ exports.echo = function (msg, loud) {
     else {
         return msg;
     }
-}
+};
