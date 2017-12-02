@@ -1,6 +1,6 @@
 {
   "name": "daburu-js-npm",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "This is an npm template for Javascript.",
   "main": "dist/index.js",
   "scripts": {
