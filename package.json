@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "npm run lint && npm run test && npm run build",
-    "build": "npm run copy",
+    "build:js": "npm run copy",
+    "build:doc": "./node_modules/.bin/jsdoc ./src -r -d docs",
+    "build": "npm run build:js && npm run build:doc",
     "test": "nyc mocha",
     "clean:dist": "rm -rf dist",
     "clean": "npm run clean:dist",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.12.1",
+    "jsdoc": "^3.5.5",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0"
   }

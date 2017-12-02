@@ -64,3 +64,13 @@ This project uses [Mocha](https://mochajs.org/) and it just so happens that WebS
  	
  When you run a configuration using the *Run with Coverage* options, the IDE will produce a coverage report and mark up your code files coverage indicators.
  
+## Document Your Code
+This project is configured with [jsdoc](http://usejsdoc.org/about-getting-started.html) to produce API documentation from the source code.
+ 
+You can generate the documentation by itself by running the following npm script:
+
+```bash
+npm run build:doc
+```
+
+This script is also run as part of the normal build process.
